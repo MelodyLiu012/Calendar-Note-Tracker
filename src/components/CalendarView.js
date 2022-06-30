@@ -2,7 +2,7 @@ import React from 'react'
 import Calendar from './Calendar'
 import MonthYearLabel from './MonthYearLabel'
 
-const CalendarView = () => {
+const CalendarView = ({ onSearchClicked }) => {
 
   return (
     <div style={{ 
@@ -12,7 +12,7 @@ const CalendarView = () => {
       boxSizing: "border-box", // prevent padding from increasing div size
       }}
     >
-      <MonthYearLabel month="January" year="2022" />
+      <MonthYearLabel month="January" year="2022" onSearchClicked={onSearchClicked} />
       <Calendar />
     </div>
   )

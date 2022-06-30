@@ -1,5 +1,6 @@
 import React from 'react'
 import MonthSelectOption from './MonthSelectOption'
+import {IoChevronUp, IoChevronDown} from "react-icons/io5"
 
 const MonthSelectView = () => {
   return (
@@ -12,6 +13,7 @@ const MonthSelectView = () => {
       alignItems: "flex-end",
       // borderRight: "0.1em darkgray solid"
     }}>
+      {/* <IoChevronUp /> */}
       <MonthSelectOption monthText="Jan"/>
       <MonthSelectOption monthText="Feb"/>
       <MonthSelectOption monthText="Mar"/>
@@ -24,6 +26,7 @@ const MonthSelectView = () => {
       <MonthSelectOption monthText="Oct"/>
       <MonthSelectOption monthText="Nov"/>
       <MonthSelectOption monthText="Dec"/>
+      {/* <IoChevronDown /> */}
     </div>
   )
 }

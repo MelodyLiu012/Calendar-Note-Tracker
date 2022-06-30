@@ -4,23 +4,41 @@ const MonthSelectOption = ({monthText}) => {
     const [style, setStyle] = useState(monthSelectDefaultStyle);
     const [selected, setSelected] = useState(false);
 
+    
+
     return (
         <div 
             className='font-inconsolata'
             style={style}
             onPointerOver={ () => {
-                setStyle(monthHoveredStyle);
+                setStyle({...style, 
+                    color: "white",
+                    cursor: "pointer",
+                    backgroundColor: "rgba(0, 0, 0, 0.3)",
+                    fontWeight: "normal"
+                });
             }}
             onPointerOut={ () => {
                 if (selected) {
-                    setStyle(monthSelectedStyle);
+                    setStyle({...style, 
+                        color: "black",
+                        backgroundColor: "transparent",
+                        borderLeft: "5px black solid",
+                        fontWeight: "bold"
+                    });
                 }
                 else {
                     setStyle(monthSelectDefaultStyle);
                 }
             }}
             onClick={ () => {
-                setStyle(monthSelectedStyle);
+                setStyle({...style, 
+                    color: "black",
+                    backgroundColor: "transparent",
+                    // background: "linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0))",
+                    borderLeft: "5px black solid",
+                    fontWeight: "bold"
+                });
                 setSelected(true);
             }}
         >
@@ -37,6 +55,7 @@ const monthSelectDefaultStyle = {
     paddingLeft: "5vh",
     paddingRight: "5vh",
     fontSize: "1.3em",
+
     color: "gray",
     cursor: "default",
     backgroundColor: "transparent"
@@ -50,6 +69,7 @@ const monthHoveredStyle = {
     paddingLeft: "5vh",
     paddingRight: "5vh",
     fontSize: "1.3em",
+
     color: "white",
     cursor: "pointer",
     backgroundColor: "rgba(0, 0, 0, 0.3)"
@@ -63,6 +83,7 @@ const monthSelectedStyle = {
     paddingLeft: "5vh",
     paddingRight: "5vh",
     fontSize: "1.3em",
+    
     color: "black",
     backgroundColor: "transparent",
     borderLeft: "5px black solid",

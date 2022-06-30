@@ -1,0 +1,4 @@
+- add a scroll select of years to the left of scroll select of months
+- generate dates
+- "search": allow users to enter dates and/or select from a scroll dropdown(which has fading end)
+- thumbnail can be notecard(with limited word count) or picture
