@@ -6,7 +6,7 @@ const MonthYearLabel = ({ month, year, onSearchClicked }) => {
     
     return (
         <div 
-            className="font-inconsolata"
+            
             style={{
                 height: "5%",
                 fontSize: "1.8em",

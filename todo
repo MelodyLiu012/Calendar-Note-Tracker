@@ -2,3 +2,7 @@
 - generate dates
 - "search": allow users to enter dates and/or select from a scroll dropdown(which has fading end)
 - thumbnail can be notecard(with limited word count) or picture
+- add an optional caption to pic(default is pic file name)
+- caption for notes are the titles
+- expand each pic/note with sliding animation, the window to the original's right
+- expanded/preview view and list view option

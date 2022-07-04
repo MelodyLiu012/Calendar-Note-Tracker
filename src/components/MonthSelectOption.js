@@ -8,7 +8,6 @@ const MonthSelectOption = ({monthText}) => {
 
     return (
         <div 
-            className='font-inconsolata'
             style={style}
             onPointerOver={ () => {
                 setStyle({...style, 

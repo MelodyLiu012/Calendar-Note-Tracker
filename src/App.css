@@ -3,11 +3,12 @@
   src: local('Inconsolata'), url(./assets/Inconsolata-Regular.ttf) format('truetype');
 }
 
-.font-inconsolata {
+/* .font-inconsolata {
   font-family: 'Inconsolata';
-}
+} */
 
 .App {
+  font-family: 'Inconsolata';
   display: flex;
   flex-direction: row;
   justify-content: center;

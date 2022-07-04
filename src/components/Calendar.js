@@ -7,7 +7,7 @@ const Calendar = () => {
             height: "83%",
             border: "2px solid rgba(0, 0, 0, 0.2)",
             aspectRatio: "7 / 5",
-            padding: "0"
+            padding: "0",
             // height: "80%"
         }}
     >
@@ -138,12 +138,13 @@ const dayStyle = {
     border: "1px rgba(0, 0, 0, 0.2) solid",
     boxSizing: "border-box",
     color: "rgba(0, 0, 0, 0.5)",
-    padding: "4px 4px 4px 4px"
+    padding: "0px 4px 4px 4px"
 }
 
 const weekStyle = {
     height: "20%",
     margin: "0",
+    padding: "0",
     width: "100%",
     display: "flex",
     alignContent: "stretch"
