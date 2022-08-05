@@ -1,3 +1,4 @@
+### Todos (likely not updated) 
 - add a scroll select of years to the left of scroll select of months
 - generate dates
 - "search": allow users to enter dates and/or select from a scroll dropdown(which has fading end)
@@ -6,3 +7,7 @@
 - caption for notes are the titles
 - expand each pic/note with sliding animation, the window to the original's right
 - expanded/preview view and list view option
+- autosave
+- optimize by moving unchanging styles to css file, React.memo, useRef, callback functions, etc
+- note tags, appear under name of note in notecard, deletable like discord roles or just under note settings
+- add new note button

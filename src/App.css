@@ -3,9 +3,9 @@
   src: local('Inconsolata'), url(./assets/Inconsolata-Regular.ttf) format('truetype');
 }
 
-/* .font-inconsolata {
+.font-inconsolata {
   font-family: 'Inconsolata';
-} */
+}
 
 .App {
   font-family: 'Inconsolata';
@@ -14,7 +14,17 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgb(255, 213, 220), rgb(190, 226, 238), white);
+  /* background-image: linear-gradient(rgb(172, 188, 251), rgb(186, 186, 236), rgb(238, 217, 250)); */
+  background-image: url("./assets/ocean_background.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* background-color: rgb(238, 217, 250); */
+  overflow: hidden;
+  position: relative;
+}
+
+.dltFocusStyle:focus {
+  outline: none;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
