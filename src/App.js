@@ -44,17 +44,6 @@ const App = () => {
     selectedIndex: 1
   })
 
-
-  /* refs to children */
-  // const calendarStateRef = useRef();
-  // // const getCalendarState = () => {
-  // //   const calendarState = calendarStateRef.current.
-  // // }
-  // const dayNotesViewStateRef = useRef();
-  // const getIsNoteClicked = () => (dayNotesViewStateRef.current.isNoteClicked());
-  // const getClickedNoteIndex = () => {dayNotesViewStateRef.current.getClickedNoteIndex()}
-  // // const getClickedNote = () => (dayNotes[getClickedNoteIndex()]);
-
   useEffect(() => {
     // TODO: fetch notes according to selected date
   }/*, [date]*/)

@@ -16,8 +16,8 @@
   height: 100%;
   /* background-image: linear-gradient(rgb(172, 188, 251), rgb(186, 186, 236), rgb(238, 217, 250)); */
   background-image: url("./assets/ocean_background.svg");
-  background-size: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
   /* background-color: rgb(238, 217, 250); */
   overflow: hidden;
   position: relative;
@@ -25,6 +25,44 @@
 
 .dltFocusStyle:focus {
   outline: none;
+}
+
+/**********scrollbars***********/
+.cleanScrollbar::-webkit-scrollbar {
+  width: 7px;
+  /* display: none; just to be sure */
+}
+/* Track */
+/* .cleanScrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} */
+/* Handle */
+.cleanScrollbar::-webkit-scrollbar-thumb {
+  background: rgb(189, 189, 189, 0.3);  
+  border-radius: 5px;
+}
+/* Handle on hover */
+.cleanScrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(189, 189, 189); 
+}
+
+/*******hacky way of applying css to notecards********/
+.cleanScrollbar ::-webkit-scrollbar {
+  width: 7px;
+  /* display: none; just to be sure */
+}
+/* Track */
+/* .cleanScrollbar ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} */
+/* Handle */
+.cleanScrollbar ::-webkit-scrollbar-thumb {
+  background: rgb(189, 189, 189, 0.3);  
+  border-radius: 5px;
+}
+/* Handle on hover */
+.cleanScrollbar ::-webkit-scrollbar-thumb:hover {
+  background: rgb(189, 189, 189); 
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

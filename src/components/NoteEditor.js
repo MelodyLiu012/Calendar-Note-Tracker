@@ -22,26 +22,6 @@ import VerticalLine from './VerticalLine';
 import EditorBtnWrapper from "./EditorBtnWrapper"
 
 const NoteEditor = ({ note, noteClicked, setEditorState, editorState }) => {
-  // const [visible, setVisible] = useState(false);
-  
-  // refactor below later, repetitive
-  const setVisible = (visible) => {
-    setEditorState({...editorState, isNoteSelected: visible});
-  }
-  const toggleVisibility = () => { // idk if need
-    // if (visible) {
-    //   setVisible(false);
-    // } 
-    // else {
-    //   setVisible(true);
-    // }
-    if (editorState.isNoteSelected) {
-      setVisible(false);
-    }
-    else {
-      setVisible(true);
-    }
-  }
 
   useEffect(() => {
 
@@ -145,7 +125,7 @@ const noteEditorStyle = {
   justifyContent: "space-around",
   padding: "2%",
   boxSizing: "border-box",
-  borderLeft: "2px white solid",
+  borderLeft: "2px white dashed",
   gap: "3%",
 }
 

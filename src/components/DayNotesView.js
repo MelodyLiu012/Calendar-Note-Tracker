@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Notecard from './Notecard';
-import {FaPlus} from "react-icons/fa"
+import AddNoteBtn from './AddNoteBtn';
 
 const DayNotesView = ( { dayNotes, setEditorState } ) => {
   const [visible, setVisible] = useState(true);
@@ -17,18 +17,13 @@ const DayNotesView = ( { dayNotes, setEditorState } ) => {
   }, []) 
 
   return (
-    <div style={ visible ? {...notesViewStyle, display: "inline"} : notesViewStyle }>
-      {/* <FaPlus style={{
-        position: "absolute",
-        color: "white",
-        backgroundColor: "rgba(150, 150, 150, 0.8)",
-        width: "20px",
-        height: "20px",
-        borderRadius: "20px",
-        border: "10px solid rgba(150, 150, 150, 0.0)",
-        right: "0%",
-        bottom: "0%"
-      }}></FaPlus> */}
+    <div 
+      className='cleanScrollbar'
+      style={ visible ? {...notesViewStyle, display: "inline"} : notesViewStyle }>
+      
+      {/* Add note button */}
+      <AddNoteBtn></AddNoteBtn>
+      
 
       <div style={{ // thumbnail container
         width: "100%",
@@ -73,16 +68,17 @@ const notesViewStyle = {
   background: "rgba(255, 255, 255, 0.6)",
   width: "39vw", 
   height: "100vh",
-  // position: "absolute",
   display: "none",
   right: "0%",
   justifyContent: "space-around",
   padding: "2%",
+  // paddingTop: "7%",
   boxSizing: "border-box",
   borderLeft: "2px lightgray solid",
   gap: "3%",
   overflowY: "auto",
-  overflowX: "hidden"
+  overflowX: "hidden",
+  position: "relative"
 }
 
 export default DayNotesView
