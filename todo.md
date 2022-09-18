@@ -10,3 +10,5 @@
 - autosave
 - optimize by moving unchanging styles to css file, React.memo, useRef, callback functions, etc
 - note tags, appear under name of note in notecard, deletable like discord roles or just under note settings
+- search notes by tag or title
+- reorder notes function

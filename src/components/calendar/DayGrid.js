@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DayGrid = ( { day, showNotesFunc } ) => {
+const DayGrid = ( { day, thumbnail, showNotesFunc } ) => {
   return (
     <div 
       style={{
@@ -10,11 +10,15 @@ const DayGrid = ( { day, showNotesFunc } ) => {
         border: "1px rgba(0, 0, 0, 0.2) solid",
         boxSizing: "border-box",
         color: "rgba(0, 0, 0, 0.5)",
-        padding: "1px 4px 4px 4px"
+        padding: "1px 4px 4px 4px",
+        // backgroundImage: `url('${require("../assets/placeholders/placeholder_1.jpg")}')`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+        
       }}
       onClick={showNotesFunc}
     >
-      {day}
+      {day} 
     </div>
   )
 }

@@ -1,46 +1,50 @@
 import { React, useState} from "react";
 
 const Notecard = ({ dayNote, setEditorState }) => {
-    const [hovered, setHovered] = useState(false);
+    const [hovering, setHovering] = useState(false);
     const [clicked, setClicked] = useState(false); // add style to clicked state?
 
     return (
         <div 
             onClick={() => {
                 setEditorState({ 
-                    isNoteSelected: true,
+                    visible: true,
                     selectedIndex: dayNote.index
                 });
             }}
             onPointerEnter={() => {
-                setHovered(true);
+                setHovering(true);
             }}
             onPointerLeave={() => {
-                setHovered(false);
+                setHovering(false);
             }}
             style={{
-                border: hovered ? "2px solid gray": "2px solid lightgray",
+                border: hovering ? "2px solid gray": "2px solid lightgray",
                 borderRadius: "10px",
-                height: "35%",
-                marginTop: "4%",
                 width: "100%",
+                height: "35%",
+                maxHeight: "35vh",
+                marginTop: "4%",
                 overflow: "hidden",
                 backgroundColor: "rgba(255, 255, 255, 0.6)",
             }}
         >
 
             <div 
+                placeholder="Empty..."
+                className="notecard" // style in css file
                 style={{
                     lineHeight: "1.3em",
                     overflow: "auto",
+                    minWidth: "100%",
                     height: "90%",
                     padding: "2% 4% 2% 4%",
                     boxSizing: "border-box",
-                    cursor: hovered ? "pointer": "default",
+                    cursor: hovering ? "pointer": "default",
                     scrollbarWidth: "none"
                 }}
             >
-                {dayNote.text}
+                {dayNote.content}
             </div>
 
             <div style={{
@@ -58,6 +62,14 @@ const Notecard = ({ dayNote, setEditorState }) => {
                 Note Title Here
             </div>
             
+            {/*it doesnt work??????????????*/}
+            {/* <div style={{ 
+                width: "100%", 
+                height: "9px",
+                backgroundColor: "lightgray",
+                boxSizing: "border-box",
+                display: dayNote.index == 0 ? "block" : "none"
+            }}>aaaaaaaaaaaaaaaaaaaaaaaaa</div> */}
         </div>
         
         

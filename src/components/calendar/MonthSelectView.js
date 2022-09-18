@@ -5,12 +5,13 @@ import {IoChevronUp, IoChevronDown} from "react-icons/io5"
 const MonthSelectView = () => {
   return (
     <div style={{
-      width: "15vw", 
+      width: "12%", 
       height: "100vh",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "flex-end",
+      // background: "green"
       // borderRight: "0.1em darkgray solid"
     }}>
       {/* <IoChevronUp /> */}
